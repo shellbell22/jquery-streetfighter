@@ -4,8 +4,8 @@ $(document).ready(function() {
 		$('.ryu-ready').show();
   	})
  	.mouseleave(function() {
-    //	$('.ryu-ready').hide();
-	//	$('.ryu-still').show();
+    	$('.ryu-ready').hide();
+		$('.ryu-still').show();
   	})
  	.mousedown(function() {
    	 	playHadouken();
@@ -51,9 +51,9 @@ function myloop () {
 		$('.text').fadeOut(1000);
 		$('#text' + loopcount).delay(1000).fadeIn(1000);
 		loopcount++;
-		if (loopcount > 2) loopcount = 1;
+		if (loopcount > 3) loopcount = 1;
 		myloop();
-		}, 3000);
+		}, 5000);
 }
 myloop();
 

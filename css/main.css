@@ -47,6 +47,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.logo {
+	background-image: url('../images/sf-logo.png');
+}
+
 .hadouken {
 	background-image: url('../images/hadouken.gif');
 	width: 156px;
