@@ -18,12 +18,25 @@ body {
     display: inline-block;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+.ryu-hulk {
+    filter: hue-rotate(90deg);
+   	width: 659px;
+   	height: 494px;
+	display: inline-block;
+	position: absolute;
+    left: 650px;
+    transform: scaleX(-1);
+}
+
+
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool, .ryu-hulk-still, 
+.ryu-hulk-ready, .ryu-hulk-throwing, .ryu-hulk-cool {
   width: 659px;
   height: 494px;
 }
 
-.ryu-ready, .ryu-throwing, .ryu-cool {
+.ryu-ready, .ryu-throwing, .ryu-cool, 
+.ryu-hulk-ready, .ryu-hulk-throwing, .ryu-hulk-cool {
   display: none;
 } 
 
@@ -43,15 +56,41 @@ body {
 	background-image: url('../images/ryu-cool.gif');
 }
 
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+.ryu-hulk-ready {
+  background-image: url('../images/ryu-ready-position.gif');
+}
+
+.ryu-hulk-still {
+  background-image: url('../images/ryu-standing-still.png');
+}
+
+.ryu-hulk-throwing {
+  background-image: url('../images/ryu-throwing-hadouken.png');
+}
+
+.ryu-hulk-cool {
+	background-image: url('../images/ryu-cool.gif');
+}
+
+.hadouken, .hadouken-hulk, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool,
+.ryu-hulk-still, .ryu-hulk-ready, .ryu-hulk-throwing, .ryu-hulk-cool {
   background-repeat: no-repeat;
 }
 
-.logo {
-	background-image: url('../images/sf-logo.png');
+.hadouken {
+	background-image: url('../images/hadouken.gif');
+	width: 156px;
+	height: 90px;
+	display: none;
+	float: left;
+	position: absolute;
+	z-index: 10;
+	top: 167px;
+	left: 520px;
+	float: left;
 }
 
-.hadouken {
+.hadouken-hulk {
 	background-image: url('../images/hadouken.gif');
 	width: 156px;
 	height: 90px;
@@ -76,6 +115,8 @@ body {
 .hidden {
 	display: none;
 }
+
+
 
 .how-to p {
     width: 50%;

@@ -40,7 +40,46 @@ $(document).ready(function() {
 		}
 	})
 
+$('.ryu-hulk').mouseenter(function() {
+    	$('.ryu-hulk-still').hide();
+		$('.ryu-hulk-ready').show();
+  	})
+ 	.mouseleave(function() {
+    	$('.ryu-hulk-ready').hide();
+		$('.ryu-hulk-still').show();
+  	})
+ 	.mousedown(function() {
+   	 	playHadouken();
+  		$('.ryu-hulk-ready').hide();
+  		$('.ryu-hulk-throwing').show();
+  		$('.hadouken-hulk').finish().show().animate(
+  			{'right': '1020px'},
+  			500,
+  			function() {
+   			 	$(this).hide();
+    			$(this).css('right', '520px');
+  			}
+		);
+	})
+  	.mouseup(function() {
+    	$('.ryu-hulk-throwing').hide();
+  		$('.ryu-hulk-ready').show();
+  	}); 
 
+	$(document).keydown(function(e) {
+		if (e.keyCode == 89) {
+			//alert('x is pressed');
+			$('.ryu-hulk-still').hide();
+			$('.ryu-hulk-ready').hide();
+			$('.ryu-hulk-cool').show();
+		}
+	})
+	.keyup(function(e){
+		if(e.keyCode == 89) {
+			$('.ryu-hulk-cool').hide();
+			$('.ryu-hulk-still').show();
+		}
+	})
 
 
 });
@@ -51,7 +90,7 @@ function myloop () {
 		$('.text').fadeOut(1000);
 		$('#text' + loopcount).delay(1000).fadeIn(1000);
 		loopcount++;
-		if (loopcount > 3) loopcount = 1;
+		//if (loopcount > 3) //loopcount = 1;
 		myloop();
 		}, 5000);
 }
