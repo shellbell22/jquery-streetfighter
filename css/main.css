@@ -19,7 +19,7 @@ body {
 }
 
 .ryu-hulk {
-    filter: hue-rotate(90deg);
+    -webkit-filter: hue-rotate(90deg);
    	width: 659px;
    	height: 494px;
 	display: inline-block;
@@ -87,7 +87,6 @@ body {
 	z-index: 10;
 	top: 167px;
 	left: 520px;
-	float: left;
 }
 
 .hadouken-hulk {
@@ -95,12 +94,11 @@ body {
 	width: 156px;
 	height: 90px;
 	display: none;
-	float: left;
+	float: right;
 	position: absolute;
 	z-index: 10;
 	top: 167px;
 	left: 520px;
-	float: left;
 }
 
 .textcontent {
